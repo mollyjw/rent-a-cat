@@ -1,0 +1,33 @@
+<mat-toolbar>
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button with menu ">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>view_list</mat-icon>
+      <span>View All Cats</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>add</mat-icon>
+      <span>Add a Cat</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>thumbs_up_down</mat-icon>
+      <span>Reviews</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>info</mat-icon>
+      <span>About Us</span>
+    </button>
+  </mat-menu>
+
+  <span class="title">Rent-A-Cat</span>
+  <mat-icon aria-hidden="false" aria-label="Example cat icon">book_online</mat-icon>
+  <span class="spacer"></span>
+  <span class="smaller">Sign-Up</span>
+  <span class="spacer2"></span>
+  <span class="smaller">Sign-In</span>
+  <span class="spacer2"></span>
+
+</mat-toolbar>
