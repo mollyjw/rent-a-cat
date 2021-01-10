@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,8 +14,14 @@ import { HomeContentComponent } from './home/home-content/home-content.component
 import {MatCardModule} from '@angular/material/card';
 import { AllCatsComponent } from './cats/all-cats/all-cats.component';
 import { CatCardComponent } from './cats/all-cats/cat-card/cat-card.component';
-import { ImportCatComponent } from './cats/import-cat/import-cat.component';
 import { CatService } from './shared/services/cat.service';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatTableModule} from '@angular/material/table';
 
 
 
@@ -26,8 +32,7 @@ import { CatService } from './shared/services/cat.service';
     NavbarComponent,
     HomeContentComponent,
     AllCatsComponent,
-    CatCardComponent,
-    ImportCatComponent
+    CatCardComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +43,15 @@ import { CatService } from './shared/services/cat.service';
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatPaginatorModule,
+    MatProgressSpinnerModule,
+    MatSortModule,
+    MatTableModule,
+    MatFormFieldModule
   ],
   providers: [
     CatService

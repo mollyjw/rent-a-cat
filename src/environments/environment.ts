@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: "https://api.rescuegroups.org/v5"
+  apiUrl: "https://api.petfinder.com/v2"
 };
 
 /*

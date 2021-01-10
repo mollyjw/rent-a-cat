@@ -19,6 +19,12 @@ const routes: Routes = [
     component: AllCatsComponent,
     pathMatch: 'full'
   },
+  {
+    path: '',
+    redirectTo: 'secure',
+    pathMatch: 'full'
+  },
+
 ];
 
 @NgModule({

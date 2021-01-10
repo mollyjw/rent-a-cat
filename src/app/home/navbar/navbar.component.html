@@ -1,39 +1,3 @@
-<!--If not signed in-->
-<!-- <mat-toolbar>
-  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button with menu ">
-    <mat-icon>menu</mat-icon>
-  </button>
-
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item>
-      <a [routerLink]="['/allcats']" routerLink="active">
-      <mat-icon>view_list</mat-icon>
-      <span>View All Cats</span>
-      </a>
-    </button>
-    <button mat-menu-item>
-      <mat-icon>thumbs_up_down</mat-icon>
-      <span>Reviews</span>
-    </button>
-    <button mat-menu-item>
-      <mat-icon>info</mat-icon>
-      <span>About Us</span>
-    </button>
-  </mat-menu>
-
-  <span class="spacer"></span>
-  <span class="title">Rent-A-Cat</span>
-  <mat-icon aria-hidden="false" aria-label="Example cat icon">book_online</mat-icon>
-  <span class="spacer"></span>
-  <span class="smaller">Sign-Up</span>
-  <span class="spacer2"></span>
-  <span class="smaller">Sign-In</span>
-  <span class="spacer2"></span>
-
-</mat-toolbar> -->
-
-
- <!--If signed in-->
 
 <mat-toolbar>
   <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button with menu ">
@@ -48,10 +12,6 @@
       </a>
     </button>
     <button mat-menu-item>
-      <mat-icon>add</mat-icon>
-      <span>Add a Cat</span>
-    </button>
-    <button mat-menu-item>
       <mat-icon>thumbs_up_down</mat-icon>
       <span>Reviews</span>
     </button>
@@ -62,14 +22,13 @@
   </mat-menu>
 
   <span class="spacer"></span>
-  <a [routerLink]="['/home']" routerLink="active">
-    <span class="title">Rent-A-Cat</span>
-  </a>
+  <a [routerLink]="['/home']" routerLink="active"></a>
+  <span class="title">Rent-A-Cat</span>
   <mat-icon aria-hidden="false" aria-label="Example cat icon">book_online</mat-icon>
   <span class="spacer"></span>
   <span class="smaller">Welcome</span>
   <span class="spacer2"></span>
-  <span class="smaller">Sign-Out</span>
+
   <span class="spacer2"></span>
 
 </mat-toolbar>
