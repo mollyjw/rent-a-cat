@@ -54,7 +54,7 @@ import {MatTableModule} from '@angular/material/table';
     MatFormFieldModule
   ],
   providers: [
-    CatService
+    CatService,
   ],
   bootstrap: [AppComponent]
 })
