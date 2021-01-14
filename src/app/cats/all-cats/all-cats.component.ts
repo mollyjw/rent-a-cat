@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { Cat } from 'src/app/shared/models/cat.model';
 import { CatService } from 'src/app/shared/services/cat.service';
 
@@ -9,6 +10,7 @@ import { CatService } from 'src/app/shared/services/cat.service';
 })
 export class AllCatsComponent implements OnInit {
   allCats: Cat[] = []
+  private subs = new Subscription()
 
   constructor(
     private catService: CatService,
@@ -19,14 +21,20 @@ export class AllCatsComponent implements OnInit {
   }
 
   showAllCats() {
-    this.catService.getAllCats().subscribe(allCats => {
-      if (allCats) {
-        this.allCats = allCats
-      }
-    }, error => {
-      if (error) {
-        console.log(error)
-      }
-    })
+    this.subs.add(
+      this.catService.getAllCats().subscribe(data => {
+        if (data) {
+          if (data.length) {
+            this.allCats = data.map(x => new Cat(x))
+          } else {
+            this.allCats = []
+          }
+        }
+      }, error => {
+        if (error) {
+          console.log(error)
+        }
+      })
+    )
   }
 }

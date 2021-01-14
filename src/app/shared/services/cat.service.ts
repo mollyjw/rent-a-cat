@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
@@ -12,11 +12,16 @@ export class CatService {
   private catApi: string;
   constructor(
     private http: HttpClient
-    ) {
-      this.catApi = `${environment.apiUrl}api/cats`;
-    }
+  ) {
+    this.catApi = `${environment.apiUrl}/public/animals/search/availabe/cats`;
+  }
 
-    getAllCats() {
-      return this.http.get<Cat[]>(`${this.catApi}/index`);
-    }
+  getAllCats() {
+    const headers = new HttpHeaders({
+      'content_type': 'application/vnd.api+json',
+      'authorization': '1ByRL1lJ',
+    })
+    return this.http.get<Cat[]>(`${this.catApi}`, { headers });
+  }
+
 }

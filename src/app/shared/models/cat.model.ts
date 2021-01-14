@@ -1,3 +1,5 @@
+import { type } from "os"
+
 export class Cat {
   name: string
   breed: string
@@ -48,3 +50,25 @@ export class Cat {
   }
 }
 
+// id
+// attributes
+//   activityLevel
+//   ageGroup
+//   breedPrimary
+//   coatLength
+//   isCurrentVaccinations
+//   isDeclawed
+//   descriptionText
+//   isHousetrained
+//   isKidsOk
+//   name
+//   newPeopleReaction
+//   pictureThumbnailUrl
+//   createdDate
+//   updatedDate
+
+// relationships
+//   pictures
+//     data
+//       type
+//       id
