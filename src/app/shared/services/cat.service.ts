@@ -16,6 +16,10 @@ export class CatService {
     this.catApi = `${environment.apiUrl}/public/animals/search/availabe/cats`;
   }
 
+  getCatbyId(params: { id: any; }) {
+    return this.http.get<any>(`${this.catApi}/?id=${params.id}`)
+  }
+
   getAllCats() {
     const headers = new HttpHeaders({
       'content_type': 'application/vnd.api+json',

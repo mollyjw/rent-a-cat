@@ -17,24 +17,24 @@ export class AllCatsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.showAllCats()
+    // this.showAllCats()
   }
 
-  showAllCats() {
-    this.subs.add(
-      this.catService.getAllCats().subscribe(data => {
-        if (data) {
-          if (data.length) {
-            this.allCats = data.map(x => new Cat(x))
-          } else {
-            this.allCats = []
-          }
-        }
-      }, error => {
-        if (error) {
-          console.log(error)
-        }
-      })
-    )
-  }
+  // showAllCats() {
+  //   this.subs.add(
+  //     this.catService.getAllCats().subscribe(data => {
+  //       if (data) {
+  //         if (data.length) {
+  //           this.allCats = data.map(x => new Cat(x))
+  //         } else {
+  //           this.allCats = []
+  //         }
+  //       }
+  //     }, error => {
+  //       if (error) {
+  //         console.log(error)
+  //       }
+  //     })
+  //   )
+  // }
 }
